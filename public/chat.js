@@ -2,7 +2,7 @@
 let socket = io("http://localhost:4000");
 
 let roomInput = document.getElementById("roomName");
-let joing = document.getElementById("join");
+let join = document.getElementById("join");
 let userVideo = document.getElementById("user-video");
 let peerVideo = document.getElementById("peer-video");
 
@@ -11,7 +11,7 @@ let creator;
 let userStream;
 let rtcPeerConnection;
 
-joing.addEventListener("click", function () {
+join.addEventListener("click", function () {
 
     roomName = roomInput.value;
     socket.emit("join", roomName);
